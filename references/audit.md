@@ -98,7 +98,7 @@ If a URL can't be verified, include it with a note: `[URL unverified — confirm
 ## Phase 4: Update Notion
 
 ### Placement rules:
-- New foundational papers → after the last existing `### N.X —` paper entry, before the `---` divider that precedes Study Questions
+- New foundational papers → after the last existing `### N.X —` paper entry, before the `---` divider that precedes Study Questions. If no `---` divider exists (older modules), insert before `## Study Questions` or `## 📌` instead
 - New building blocks → inside the `## 🔧 Technical Building Blocks` section if it exists; if not, create it before `## Study Questions`
 - New study questions → appended to the end of the existing list, using `- [ ]` checkbox format
 

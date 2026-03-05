@@ -54,7 +54,7 @@ Based on what the user asked, route to the appropriate reference file. Read it b
 | "Audit this module" / "What am I missing?" / "Check this" | AUDIT | `references/audit.md` |
 | "Add citations from this paper" / "Expand this module" | EXPAND | `references/expand.md` |
 | "Make a deep dive prompt" / "Create a study prompt" | PROMPT | `references/prompts.md` |
-| "How's my program?" / "What should I do next?" / "Status" | STATUS | `references/status.md` |
+| "How's my program?" / "What should I do next?" / "Status" / "What have I read?" / "Am I on track?" | STATUS | `references/status.md` |
 | Shares a URL and asks "is this covered?" | EXPAND + AUDIT | Both |
 
 If ambiguous, ask one clarifying question before routing.
