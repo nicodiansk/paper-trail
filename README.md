@@ -1,8 +1,8 @@
-# paper-trail
-
-A Claude skill that turns any topic into a rigorous, structured study program in Notion — then keeps it sharp by surfacing missing foundational papers, unexplained concepts, and citation chains you haven't covered yet.
+# Paper Trail
 
 > Follow the citations. Build the map. Know the ingredients.
+
+A Claude skill that turns any topic into a rigorous, structured study program in Notion — then keeps it sharp by surfacing missing foundational papers, unexplained concepts, and citation chains you haven't covered yet.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Works with Claude](https://img.shields.io/badge/Works%20with-Claude-blueviolet)](https://claude.ai)
