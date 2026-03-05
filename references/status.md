@@ -27,6 +27,8 @@ For each module, count:
 - **Study questions**: total vs completed (count `- [ ]` vs `- [x]` under Study Questions)
 - **Synthesis exercise completed?** check `- [x]` vs `- [ ]` under Synthesis Exercise
 
+**Fallback for older modules:** If a module has papers but no `- [ ] Read` or `- [x] Read` checkboxes at all, it predates checkbox tracking. Report progress as "Unknown (no checkboxes)" rather than "Not started" — the user may have studied these papers outside the tracking system. Suggest adding checkboxes via an audit.
+
 ---
 
 ## Phase 3: Assess Program Health
@@ -35,8 +37,6 @@ Score each module on **content depth**:
 - **Dense**: 6+ papers, has foundational + building blocks sections
 - **Adequate**: 4-5 papers, has at least one of the two sections
 - **Thin**: <4 papers or missing both sections
-- **Untouched**: no checkboxes checked at all
-
 Score each module on **study progress**:
 - **Complete**: all papers read + all study questions answered + synthesis done
 - **In progress**: some papers read or some questions answered
@@ -56,7 +56,7 @@ Priority order:
 1. If any module is "Thin" → suggest audit or expand
 2. If modules are imbalanced → suggest auditing the weakest
 3. If a module has papers but 0 read → suggest starting the deep dive
-4. If everything looks healthy → suggest expanding from a new URL or generating a prompt page
+4. If everything looks healthy → suggest expanding from a new URL (read `references/expand.md`) or generating a prompt page (read `references/prompts.md`)
 
 ---
 
@@ -65,9 +65,9 @@ Priority order:
 ```
 📊 Program Health: [Title]
 
-| Module | Papers (read/total) | Foundational | Building Blocks | Questions (done/total) | Content | Progress |
-|--------|---------------------|--------------|-----------------|------------------------|---------|----------|
-| ...    | ...                 | ...          | ...             | ...                    | ...     | ...      |
+| Module | Papers (read/total) | Sections (📌/🔧) | Questions (done/total) | Content | Progress |
+|--------|---------------------|-------------------|------------------------|---------|----------|
+| ...    | ...                 | ✅/❌              | ...                    | ...     | ...      |
 
 💡 Recommendation: [specific, actionable next step with reasoning]
 ```
