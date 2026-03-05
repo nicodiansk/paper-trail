@@ -71,6 +71,21 @@ Before doing any research, reflect back what you've understood:
 
 Get confirmation or correction before moving on.
 
+### 1d. Landscape Preview
+
+Before asking the user to switch to Research Mode, run 2-3 quick web searches based on their topic and goals. Then present a landscape sketch:
+
+> "Before we go deep, here's a quick lay of the land based on what I'm seeing:
+>
+> - **Major branches/approaches:** [3-4 branches in the field]
+> - **Active debates:** [X vs Y, or the open questions people disagree on]
+> - **Typical starting point:** Most people with your background start with [Z]
+> - **Less obvious angle:** Given your specific goal, the path worth considering is [W]
+>
+> What resonates? Anything surprise you? This shapes the modules I'll propose."
+
+Wait for the user to react. Their response — what excites them, what they push back on, what they didn't know — directly informs the full Research Mode searches in Phase 2.
+
 ---
 
 ## Phase 2: Research Mode
@@ -236,9 +251,21 @@ What you'll learn:
 - [Key concept 3]
 ```
 
+**Progress section** (top of each module, after the header):
+```
+## Progress
+- [ ] Papers reviewed
+- [ ] Foundational papers complete
+- [ ] Building blocks understood
+- [ ] Study questions answered
+- [ ] Synthesis exercise completed
+```
+
 **Papers & Articles section:**
 ```
 ### [N.X] — [Title] ([Venue/Source Year])
+- [ ] Read
+- [ ] Can explain to someone else
 **[One-line description of what this resource does]**
 - Paper/Blog: [URL]
 - Authors/Source: [Author(s) — Institution or Publication]
@@ -255,11 +282,20 @@ Papers the listed resources cite as their intellectual basis — the prior work 
 **🔧 Technical Building Blocks** (if applicable):
 Named concepts, tools, or algorithms that appear in this module's papers but aren't explained. Explain each enough to whiteboard it, not just name it. Use the format from `audit.md`.
 
-**Study Questions:**
+**Study Questions** (checkbox format):
+```
+## Study Questions
+- [ ] [Question requiring synthesis across papers...]
+- [ ] [Question requiring domain transfer...]
+- [ ] [Question connecting 3+ papers...]
+```
 5-8 questions requiring synthesis not recall. At least 2 must ask the user to apply concepts outside the paper's original domain.
 
-**Synthesis Exercise:**
-One open-ended design task tailored to the user's stated goal:
+**Synthesis Exercise** (checkbox format):
+```
+## Synthesis Exercise
+- [ ] [Open-ended design task tailored to the user's stated goal...]
+```
 "If I were building [X — something relevant to what the user said they want to do], here's how I'd use the patterns from this module..."
 
 ### 4d. Create the Deep Dive Prompt page
@@ -288,6 +324,13 @@ Close with:
 
 > "One last thing: is there anything about the structure that feels off now that you see the full thing? Easier to fix now than midway through studying."
 
-Then, if they're happy:
+Then, assess which modules came out thinnest and offer a proactive next step:
+
+```
+💡 I noticed Module [N] is thinner than the others ([X] papers vs [Y] average).
+   Want me to audit it now, or should I research more sources for it first?
+```
+
+If they're happy and don't want immediate follow-up:
 
 > "To get started: open Module 1, then start a **new Claude session** and paste the Deep Dive Prompt with Module 1's URL. That session will run a gap audit on the module, explain any unexplained building blocks, and walk you through the papers properly. Good luck."

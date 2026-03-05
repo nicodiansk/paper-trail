@@ -36,6 +36,8 @@ Papers that are *cited by* the papers already in the module, but not listed them
 **For each gap found, prepare:**
 ```
 ### [Ref N] — [Paper Title] ([Venue Year])
+- [ ] Read
+- [ ] Can explain to someone else
 **[One-line description of what this paper contributes]**
 - Paper: [URL — verify this exists before writing]
 - Authors: [First author et al.] ([Institution])
@@ -75,9 +77,9 @@ Check whether the existing study questions cover:
 - Cross-paper synthesis (do any questions require connecting 3+ papers?)
 - Application to new domains (do any questions ask "how would you apply this to [different domain]?")
 
-For each gap, write a question that requires synthesis or application, not recall. Format:
+For each gap, write a question that requires synthesis or application, not recall. Use checkbox format:
 ```
-[N]. [Question that requires cross-paper reasoning or domain transfer]
+- [ ] [Question that requires cross-paper reasoning or domain transfer]
 ```
 
 ---
@@ -98,7 +100,7 @@ If a URL can't be verified, include it with a note: `[URL unverified — confirm
 ### Placement rules:
 - New foundational papers → after the last existing `### N.X —` paper entry, before the `---` divider that precedes Study Questions
 - New building blocks → inside the `## 🔧 Technical Building Blocks` section if it exists; if not, create it before `## Study Questions`
-- New study questions → appended to the end of the existing numbered list
+- New study questions → appended to the end of the existing list, using `- [ ]` checkbox format
 
 ### Creating a new "Foundational Papers" section:
 If the module doesn't have one, create it as:
@@ -136,6 +138,14 @@ Gap Type B (building blocks): [N found]
 Gap Type C (study questions): [N added]
 
 ⚠️  Flagged: [unverified URLs, uncertain attributions, anything needing user confirmation]
+```
 
-💡 Next: [suggested next module to audit, or paper to expand from]
+Then offer a proactive next step based on what you found:
+
+```
+💡 Of the [N] foundational papers found, [Paper X] is cited by [3+] papers
+   in this module — it's the highest-leverage gap. Want me to expand from it?
+
+   Or: Module [M] hasn't been audited yet and shares topics with this one.
+   Want me to audit that next?
 ```

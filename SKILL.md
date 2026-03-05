@@ -9,12 +9,13 @@ A fully parametric deep-study assistant for any topic, any Notion workspace, any
 
 ## What This Skill Does
 
-Helps users build and maintain rigorous, structured study programs in Notion. Four core operations:
+Helps users build and maintain rigorous, structured study programs in Notion. Five core operations:
 
 1. **SETUP** — Create a full study program in Notion from scratch (topic + optional reading list)
 2. **AUDIT** — Examine an existing module, find missing foundational papers and unexplained concepts
 3. **EXPAND** — Fetch cited papers from source URLs, auto-add them to the right module
 4. **PROMPT** — Generate a deep dive study prompt page for any module
+5. **STATUS** — Check program health, progress, and get a recommended next action
 
 ---
 
@@ -50,6 +51,7 @@ Based on what the user asked, route to the appropriate reference file. Read it b
 | "Audit this module" / "What am I missing?" / "Check this" | AUDIT | `references/audit.md` |
 | "Add citations from this paper" / "Expand this module" | EXPAND | `references/expand.md` |
 | "Make a deep dive prompt" / "Create a study prompt" | PROMPT | `references/prompts.md` |
+| "How's my program?" / "What should I do next?" / "Status" | STATUS | `references/status.md` |
 | Shares a URL and asks "is this covered?" | EXPAND + AUDIT | Both |
 
 If ambiguous, ask one clarifying question before routing.
@@ -62,7 +64,7 @@ If ambiguous, ask one clarifying question before routing.
 
 **Ingredients first.** Every paper builds on prior work. Surface the foundational "ingredients" — the concepts and papers that must be understood before the listed paper makes sense.
 
-**Production applicability.** Always connect research to what a working engineer can actually build or deploy.
+**Practical applicability.** Always connect research to what the user can actually *do* with it — whether that's building software, passing an exam, writing a thesis, making clinical decisions, or arguing a case.
 
 **No bloat.** Only add content that is genuinely missing and genuinely relevant. Don't pad modules with tangentially related work.
 

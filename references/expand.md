@@ -115,6 +115,14 @@ New building blocks added: [N]
 [list: component name]
 
 ⚠️  Flagged: [unverified URLs, papers that might belong in a different module]
+```
 
-💡 Next: [run audit on this module to catch any remaining gaps, or expand from [specific paper] next]
+Then offer a proactive next step based on what changed:
+
+```
+💡 After this expansion, [Module A] now has [X] papers while [Module B]
+   only has [Y]. Want me to audit [Module B] to balance the program?
+
+   Or: The paper you expanded from cites [Paper Z] which looks foundational
+   but landed in a different module. Want me to check if [Module C] covers it?
 ```
