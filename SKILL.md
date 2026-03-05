@@ -22,7 +22,11 @@ Helps users build and maintain rigorous, structured study programs in Notion. Fi
 ## Step 0: Resolve User Configuration
 
 ### Check persistent memory first
-Call `memory_user_edits` with `command: "view"`. Look for any stored study program config (Notion URL, topic, module list). If found: fetch the Notion URL, confirm the program is still there, skip to Step 1.
+Look for any stored study program config (Notion URL, topic, module list).
+- **Claude.ai**: call `memory_user_edits` with `command: "view"`
+- **Claude Code**: check the project's `CLAUDE.md` or memory files for stored program info
+
+If found: fetch the Notion URL, confirm the program is still there, skip to Step 1.
 
 ### If no config found — route by intent
 
@@ -34,10 +38,9 @@ Ask one question:
 - **New program from scratch** → route to `references/setup-wizard.md`. The wizard handles everything from here: Notion check, intake conversation, research mode, roadmap design, building.
 
 ### Persist to memory after any setup
-Once a program is confirmed, call `memory_user_edits` with `command: "add"`:
-`Study program: [topic] — Notion: [url] — [N] modules`
-
-Future sessions skip onboarding entirely.
+Once a program is confirmed, save the config so future sessions skip onboarding:
+- **Claude.ai**: call `memory_user_edits` with `command: "add"`: `Study program: [topic] — Notion: [url] — [N] modules`
+- **Claude Code**: write to the project's `CLAUDE.md` or memory files
 
 ---
 

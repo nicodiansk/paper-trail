@@ -67,7 +67,7 @@ For each reference found in the source paper, decide: **add, skip, or flag**.
 - It's already in the program (check all modules, not just the target)
 - It's tangentially cited (e.g. "as observed in many systems [X, Y, Z]" where it's just filler)
 - It's a dataset paper, evaluation benchmark, or tool documentation (add as a building block note instead)
-- It's too foundational to the field to be meaningful in context (e.g. "Attention is All You Need" for an NLP study — assumed prerequisite)
+- It's too foundational to the field *given the user's background from the intake* (e.g. "Attention is All You Need" for someone who already works in NLP — but include it if the user is new to the field)
 
 ### Flag if:
 - It looks highly relevant but you can't verify the URL

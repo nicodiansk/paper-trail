@@ -324,7 +324,7 @@ Close with:
 
 > "One last thing: is there anything about the structure that feels off now that you see the full thing? Easier to fix now than midway through studying."
 
-Then, assess which modules came out thinnest and offer a proactive next step:
+Then, assess which modules came out thinnest and offer a proactive next step — but only if there's a meaningful imbalance (e.g. one module has notably fewer papers than the others, not when all modules are equally thin from a fresh build):
 
 ```
 💡 I noticed Module [N] is thinner than the others ([X] papers vs [Y] average).
