@@ -1,6 +1,6 @@
 ---
 name: paper-trail
-description: "A parametric deep-study assistant that builds and maintains rigorous Notion-based study programs on any topic. Trigger this skill whenever a user wants to: create a new structured study program in Notion from a topic or reading list, audit an existing study module for missing foundational papers or unexplained concepts, expand a module by fetching citations from papers/blogs, generate deep dive prompt pages, or check whether a paper or blog URL is well-covered in their study program. Works for any domain (AI research, medicine, law, economics, history, etc.). No hardcoded Notion IDs — fully parametric, configures itself from the user's own pages."
+description: Build and maintain rigorous Notion-based study programs on any topic. Setup, audit, expand, prompt, and status check — fully parametric, any domain.
 ---
 
 # Paper Trail
