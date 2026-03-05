@@ -1,6 +1,6 @@
 ---
 name: paper-trail
-description: Build and maintain rigorous Notion-based study programs on any topic. Setup, audit, expand, prompt, and status check — fully parametric, any domain.
+description: Build and maintain rigorous, structured study programs in Notion on any topic. Use when a user wants to study a subject deeply, create a reading program, audit a study module for missing papers or concepts, expand a module from a paper or blog URL, generate deep dive prompts, or check their study progress. Trigger when users mention studying, learning roadmaps, reading lists, paper reviews, or building a study plan.
 ---
 
 # Paper Trail
