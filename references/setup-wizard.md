@@ -237,6 +237,8 @@ Suggested Schedule:
 [table: Week | Module | Est. Hours]
 ```
 
+Before creating, show the user the main page content with their specific goal statement and module index filled in. One confirmation for this page.
+
 ### 4c. Create each module sub-page
 
 For each module:
@@ -297,6 +299,11 @@ Named concepts, tools, or algorithms that appear in this module's papers but are
 - [ ] [Open-ended design task tailored to the user's stated goal...]
 ```
 "If I were building [X — something relevant to what the user said they want to do], here's how I'd use the patterns from this module..."
+
+**Build sequence:**
+1. Build Module 1 first. Show the user the complete page content (header, papers, building blocks, study questions, synthesis exercise) as it will appear in Notion. Ask: "Here's Module 1 - does this format and depth look right? If yes, I'll build the remaining modules the same way."
+2. After Module 1 is confirmed and written: build all remaining modules without individual confirmation, since the format is established. Name each module as you create it so the user can see progress.
+3. If any module has notably different structure (e.g., fewer papers, no building blocks section), flag it briefly as you build.
 
 ### 4d. Create the Deep Dive Prompt page
 

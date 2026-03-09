@@ -37,7 +37,9 @@ paper-trail fixes that. It builds the study program, finds the gaps, tracks your
 
 **Progress tracking built in.** Every paper gets `- [ ] Read` / `- [ ] Can explain to someone else` checkboxes. Study questions and synthesis exercises are trackable too. STATUS reads all of this and tells you where you actually stand.
 
-**Proactive, not reactive.** Operations don't end with "what do you want to do next?" - they analyze program state and suggest the specific highest-leverage action. Thin module? It tells you. Unaudited module that shares topics with the one you just audited? It offers to audit it.
+**Changesets, not reports.** Every operation presents the exact Notion-ready content it will write - formatted as it will appear on the page - and waits for your confirmation before touching anything. Confirmed changes are written immediately, tracked across turns, and never dropped mid-conversation.
+
+**Proactive, not reactive.** Operations don't end with "what do you want to do next?" - they analyze program state and offer to start the specific highest-leverage action. Thin module? It offers to audit it now. Unaudited module that shares topics with the one you just audited? Same thing - one "yes" and it's running.
 
 **Works for any domain.** Not hardcoded for AI papers. The skill adapts its research strategy, source types, and module structure to whatever you're studying:
 
@@ -174,13 +176,14 @@ Also check out [turbocharge](https://github.com/nicodiansk/turbocharge) - a Clau
 ```
 paper-trail/
 ├── paper-trail.skill          # Upload this in Claude.ai (ZIP)
-├── SKILL.md                   # Skill router + core principles
+├── SKILL.md                   # Skill router + core principles + execution protocol
 ├── references/
 │   ├── setup-wizard.md        # Intake + landscape preview + Notion build
 │   ├── audit.md               # Three-gap analysis logic
 │   ├── expand.md              # Citation chain fetching
 │   ├── prompts.md             # Deep-dive prompt generation
 │   └── status.md              # Program health check + next action
+├── build-skill.js             # ZIP builder (Node.js, no dependencies)
 └── README.md
 ```
 

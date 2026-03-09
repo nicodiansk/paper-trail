@@ -77,6 +77,30 @@ If ambiguous, ask one clarifying question before routing.
 
 ---
 
+## Execution Protocol (applies to all operations)
+
+**Bias toward action.** When analysis reveals something broken, missing, or improvable - propose the fix, don't just report it. If the DSPy API is outdated, present the corrected code block. If a cross-link is missing, draft the exact line. The user confirms or rejects; they should never have to ask "so are you going to fix it?"
+
+**Rule 1: Changesets, not reports.**
+Never end a turn with only analysis. Every turn that contains findings must also contain the exact Notion-ready content blocks you'll write - formatted exactly as they'll appear on the page - or an explicit "no changes needed" statement. Present the changeset, then ask: "Confirm and I'll push these to Notion?"
+
+**Rule 2: Execute before researching more.**
+If the user confirms changes, write them to Notion immediately. Do not start a new research tangent, answer a side question, or explore a new topic until all confirmed writes are complete. If the user asks something new while writes are pending, say: "Let me finish the [N] confirmed writes first, then I'll get to that."
+
+**Rule 3: Track momentum.**
+When an operation produces 3+ changes, maintain a running tracker in your responses:
+
+```
+📋 Change tracker:
+  ✅ Done: [changes already written to Notion]
+  ⏳ Confirmed: [changes approved but not yet written]
+  📝 Proposed: [changes awaiting user confirmation]
+```
+
+Update this tracker after every Notion write. Do not drop confirmed items between turns. For simpler operations (1-2 changes), a single confirmation line is enough.
+
+---
+
 ## Notion Editing Rules
 
 - Always `Notion:notion-fetch` a page before editing it
@@ -87,9 +111,9 @@ If ambiguous, ask one clarifying question before routing.
 
 ---
 
-## Output Format (when reporting to the user)
+## Output Format (after confirmed writes)
 
-After any operation, summarize:
+Use this format **after** confirmed changes have been written to Notion. Before writing, present the changeset per Rule 1 of the Execution Protocol.
 ```
 ✅ Added: [list what was added]
 ⚠️  Flagged: [anything you couldn't verify or that needs user confirmation]

@@ -51,6 +51,8 @@ Find the right module, then insert the paper entry in the correct numbered posit
 - Why it matters: [Connection to this module's theme and to adjacent papers]
 ```
 
+Present this entry to the user before writing: "This paper isn't in the program yet. Here's the entry I'll add to [Module Name] - confirm or adjust?"
+
 ---
 
 ## Phase 3: Evaluate All Citations
@@ -88,7 +90,19 @@ Limit: aim for 5-10 high-quality additions per expansion. Don't bulk-add everyth
 
 ---
 
+## Phase 4b: Present Changeset
+
+Present the full set of additions grouped by module. Show each paper entry and building block exactly as it will appear in Notion. Include the source paper from Phase 2b if it hasn't been written yet.
+
+End with: "Confirm and I'll push these to Notion?"
+
+If changes span multiple modules, list them per-module so the user can confirm selectively.
+
+---
+
 ## Phase 5: Update Notion
+
+Only enter this phase after user confirmation.
 
 Use `Notion:notion-fetch` on the target module, then `insert_content_after` to add:
 1. New paper entries (in the Papers & Articles section)
@@ -100,21 +114,12 @@ If citations span multiple modules, update each module separately. Do one at a t
 
 ---
 
-## Phase 6: Report
+## Phase 6: Confirm Writes
 
 ```
-Expanded from: [source paper title]
-Added to: [module name(s)]
-
-New papers added: [N]
-[list: title + one-line reason for adding]
-
-Skipped: [N citations — brief reason, e.g. "already in program", "tangential", "tool docs"]
-
-New building blocks added: [N]
-[list: component name]
-
-⚠️  Flagged: [unverified URLs, papers that might belong in a different module]
+✅ Expanded from: [source paper title]
+   [N] papers + [N] building blocks written to [module name(s)]
+⚠️  Flagged: [unverified URLs, cross-module papers]
 ```
 
 Then offer a proactive next step based on what changed:

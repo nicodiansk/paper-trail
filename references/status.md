@@ -58,6 +58,10 @@ Priority order:
 3. If a module has papers but 0 read → suggest starting the deep dive
 4. If everything looks healthy → suggest expanding from a new URL (read `references/expand.md`) or generating a prompt page (read `references/prompts.md`)
 
+Don't just name the operation - offer to start it immediately:
+- Instead of "suggest audit" → "Module 3 has no foundational papers section and only 2 papers. Want me to audit it now?"
+- Instead of "suggest starting the deep dive" → "Module 1 has 6 unread papers. Want me to generate a deep dive prompt so you can start studying it?"
+
 ---
 
 ## Phase 5: Report
@@ -71,3 +75,10 @@ Priority order:
 
 💡 Recommendation: [specific, actionable next step with reasoning]
 ```
+
+The recommendation line must be a concrete offer, not an observation. End with a direct question the user can answer "yes" to start the next operation immediately.
+
+Instead of:
+  `💡 Recommendation: Module 3 could use more papers`
+Write:
+  `💡 Module 3 is the weakest link (2 papers, no building blocks). Want me to audit it now? I'll find foundational papers and missing concepts.`
