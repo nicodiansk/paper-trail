@@ -173,7 +173,9 @@ Also check out [turbocharge](https://github.com/nicodiansk/turbocharge) - a Clau
 
 ## Testing after changes
 
-After modifying any `.md` file, rebuild the ZIP (`node build-skill.js`), upload `paper-trail.skill` to Claude.ai, and run through this smoke test against an existing study program.
+After modifying any `.md` file, rebuild the ZIP (`node build-skill.js`), upload `paper-trail.skill` to Claude.ai, and run through this smoke test.
+
+**Prerequisites:** An existing Notion study program with at least one audited and one unaudited module.
 
 ### 1. STATUS (read-only, safe to start here)
 
@@ -208,7 +210,7 @@ Verify:
 - [ ] If the source paper isn't in the program, Claude presents the entry and asks to confirm before adding (Phase 2b gate)
 - [ ] Phase 4b presents the full changeset grouped by module before writing
 - [ ] Phase 6 includes a skipped citations count with brief reasons
-- [ ] Confirmed writes happen before any new research
+- [ ] After confirming Phase 4b, ask a side question before Claude finishes writing - verify Claude completes the writes first (Rule 2)
 
 ### 4. PROMPT (tests preview step)
 
@@ -219,6 +221,8 @@ Verify:
 Verify:
 - [ ] Claude shows the complete page content before creating it in Notion
 - [ ] Asks for confirmation before writing
+
+> **SETUP** is not covered here - it creates new Notion pages. Test manually in a throwaway workspace after structural changes to `setup-wizard.md`.
 
 ---
 
