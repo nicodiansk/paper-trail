@@ -171,6 +171,61 @@ Also check out [turbocharge](https://github.com/nicodiansk/turbocharge) - a Clau
 
 ---
 
+## Testing after changes
+
+After modifying any `.md` file, rebuild the ZIP (`node build-skill.js`), upload `paper-trail.skill` to Claude.ai, and run through this smoke test.
+
+**Prerequisites:** An existing Notion study program with at least one audited and one unaudited module.
+
+### 1. STATUS (read-only, safe to start here)
+
+```
+"How's my program looking?"
+```
+
+Verify:
+- [ ] Report includes the health table with per-module breakdown
+- [ ] Recommendation is a concrete offer ending with a yes/no question (e.g., "Want me to audit it now?"), not a passive observation
+
+### 2. AUDIT (tests changeset gate)
+
+```
+"Audit Module [N] for gaps"
+```
+
+Verify:
+- [ ] Phase 3 ends with a full changeset - every paper, building block, and question shown exactly as it will appear in Notion
+- [ ] Claude asks "Confirm and I'll push these to Notion, or tell me what to cut/change?"
+- [ ] Claude waits for confirmation before writing anything
+- [ ] If 3+ changes, the change tracker appears and updates after each write
+- [ ] Phase 5 shows a write confirmation summary, not a discovery report
+
+### 3. EXPAND (tests confirmation gates)
+
+```
+"Expand my program from this paper: [URL]"
+```
+
+Verify:
+- [ ] If the source paper isn't in the program, Claude presents the entry and asks to confirm before adding (Phase 2b gate)
+- [ ] Phase 4b presents the full changeset grouped by module before writing
+- [ ] Phase 6 includes a skipped citations count with brief reasons
+- [ ] After confirming Phase 4b, ask a side question before Claude finishes writing - verify Claude completes the writes first (Rule 2)
+
+### 4. PROMPT (tests preview step)
+
+```
+"Generate a deep dive prompt page"
+```
+
+Verify:
+- [ ] Claude shows the complete page content before creating it in Notion
+- [ ] Asks for confirmation before writing
+
+> **SETUP** is not covered here - it creates new Notion pages. Test manually in a throwaway workspace after structural changes to `setup-wizard.md`.
+
+---
+
 ## Repo structure
 
 ```
