@@ -66,9 +66,15 @@ Brief note explaining:
 - **Master Prompt** (if the program has one): for broad discovery + synthesis across the module
 - **Deep Dive Prompt**: for precision understanding of what's already in the module, ingredient-first
 
+Present the complete page content to the user before creating it. Show the filled-in prompt (with [DOMAIN], [GOAL], [USER_ROLE] replaced but [MODULE_URL] and [PROGRAM_CONTEXT] left as placeholders) and the module quick-reference list. Ask: "Here's the prompt page - look right? Confirm and I'll create it in Notion."
+
+**Exception - when called from SETUP (setup-wizard.md Phase 4d):** The user has already confirmed the program structure. Create the prompt page without a separate confirmation.
+
 ---
 
 ## Phase 4: Create or Update the Page
+
+Only enter this phase after user confirmation (or when called from SETUP - see exception above).
 
 ### Creating new:
 Use `Notion:notion-create-pages` with the main program page as parent.

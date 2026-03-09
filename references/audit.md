@@ -93,9 +93,15 @@ Before updating Notion, verify:
 
 If a URL can't be verified, include it with a note: `[URL unverified — confirm before using]`
 
+Once verification is complete, present the full changeset to the user. Show every paper entry, building block, and study question exactly as it will appear on the Notion page - same markdown, same formatting. Group by gap type. End with: "Confirm and I'll push these to Notion, or tell me what to cut/change."
+
+Do not proceed to Phase 4 until the user confirms.
+
 ---
 
 ## Phase 4: Update Notion
+
+Only enter this phase after user confirmation. If 3+ changes are confirmed, use the change tracker.
 
 ### Placement rules:
 - New foundational papers → after the last existing `### N.X —` paper entry, before the `---` divider that precedes Study Questions. If no `---` divider exists (older modules), insert before `## Study Questions` or `## 📌` instead
@@ -124,20 +130,16 @@ Then add each building block entry underneath.
 
 ---
 
-## Phase 5: Report
+## Phase 5: Confirm Writes
+
+After all confirmed changes are written to Notion:
 
 ```
-Audit complete for: [Module name]
-
-Gap Type A (foundational papers): [N found]
-[list each: paper title + which existing paper cites it]
-
-Gap Type B (building blocks): [N found]
-[list each: component name + which paper references it]
-
-Gap Type C (study questions): [N added]
-
-⚠️  Flagged: [unverified URLs, uncertain attributions, anything needing user confirmation]
+✅ Written to [Module name]:
+  - [N] foundational papers added
+  - [N] building blocks added
+  - [N] study questions added
+⚠️  Flagged: [unverified URLs, uncertain attributions]
 ```
 
 Then offer a proactive next step based on what you found:
