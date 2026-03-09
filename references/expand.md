@@ -119,6 +119,7 @@ If citations span multiple modules, update each module separately. Do one at a t
 ```
 ✅ Expanded from: [source paper title]
    [N] papers + [N] building blocks written to [module name(s)]
+   Skipped: [N citations - brief reason, e.g. "already in program", "tangential", "tool docs"]
 ⚠️  Flagged: [unverified URLs, cross-module papers]
 ```
 

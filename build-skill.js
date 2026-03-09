@@ -13,15 +13,16 @@ const files = [
   'references/status.md',
 ];
 
+const crc32Table = new Int32Array(256);
+for (let i = 0; i < 256; i++) {
+  let c = i;
+  for (let j = 0; j < 8; j++) c = (c & 1) ? (0xEDB88320 ^ (c >>> 1)) : (c >>> 1);
+  crc32Table[i] = c;
+}
+
 function crc32(buf) {
-  const table = new Int32Array(256);
-  for (let i = 0; i < 256; i++) {
-    let c = i;
-    for (let j = 0; j < 8; j++) c = (c & 1) ? (0xEDB88320 ^ (c >>> 1)) : (c >>> 1);
-    table[i] = c;
-  }
   let crc = -1;
-  for (let i = 0; i < buf.length; i++) crc = (crc >>> 8) ^ table[(crc ^ buf[i]) & 0xFF];
+  for (let i = 0; i < buf.length; i++) crc = (crc >>> 8) ^ crc32Table[(crc ^ buf[i]) & 0xFF];
   return (crc ^ -1) >>> 0;
 }
 
@@ -36,10 +37,18 @@ const now = new Date();
 const dt = dosDateTime(now);
 
 for (const file of files) {
-  const content = Buffer.from(
-    fs.readFileSync(path.join(__dirname, file), 'utf8').replace(/\r\n/g, '\n'),
-    'utf8'
-  );
+  const filePath = path.join(__dirname, file);
+  let raw;
+  try {
+    raw = fs.readFileSync(filePath, 'utf8');
+  } catch (err) {
+    if (err.code === 'ENOENT') {
+      console.error(`Missing file: ${file} - run this from the repo root`);
+      process.exit(1);
+    }
+    throw err;
+  }
+  const content = Buffer.from(raw.replace(/\r\n/g, '\n'), 'utf8');
   const entryName = `paper-trail/${file}`;
   const compressed = zlib.deflateRawSync(content);
   entries.push({

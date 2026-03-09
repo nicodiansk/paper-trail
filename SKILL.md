@@ -79,7 +79,7 @@ If ambiguous, ask one clarifying question before routing.
 
 ## Execution Protocol (applies to all operations)
 
-**Bias toward action.** When analysis reveals something broken, missing, or improvable - propose the fix, don't just report it. If the DSPy API is outdated, present the corrected code block. If a cross-link is missing, draft the exact line. The user confirms or rejects; they should never have to ask "so are you going to fix it?"
+**Bias toward action.** When analysis reveals something broken, missing, or improvable - propose the fix, don't just report it. If a paper URL is dead, find and present the working one. If a cross-link is missing, draft the exact line. The user confirms or rejects; they should never have to ask "so are you going to fix it?"
 
 **Rule 1: Changesets, not reports.**
 Never end a turn with only analysis. Every turn that contains findings must also contain the exact Notion-ready content blocks you'll write - formatted exactly as they'll appear on the page - or an explicit "no changes needed" statement. Present the changeset, then ask: "Confirm and I'll push these to Notion?"
